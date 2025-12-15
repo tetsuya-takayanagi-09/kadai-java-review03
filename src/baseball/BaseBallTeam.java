@@ -57,7 +57,7 @@ public class BaseBallTeam {
     public void report() {
         System.out.printf(
                 "%sの2022年の成績は %d勝 %d敗 %d分、勝率は%fです。%n",
-                this.getName(),
+                this.name,
                 this.win,
                 this.lose,
                 this.draw,
