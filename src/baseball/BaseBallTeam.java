@@ -50,21 +50,18 @@ public class BaseBallTeam {
         this.draw = draw;
     }
 
-    public double getRate(int win, int lose){
-        return (double)win / (win + lose);
+    public double getRate(){
+        return (double)this.win / (this.win + this.lose);
     }
 
     public void report() {
-        int win = this.getWin();
-        int lose = this.getLose();
-        int draw = this.getDraw();
         System.out.printf(
                 "%sの2022年の成績は %d勝 %d敗 %d分、勝率は%fです。%n",
                 this.getName(),
-                win,
-                lose,
-                draw,
-                this.getRate(win, lose)
+                this.win,
+                this.lose,
+                this.draw,
+                this.getRate()
                 );
     }
 }
